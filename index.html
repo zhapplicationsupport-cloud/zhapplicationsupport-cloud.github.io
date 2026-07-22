@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator Passwords — Secure Password Generator for iOS</title>
-    <meta name="description" content="Generator Passwords — a simple and secure iOS app to generate strong passwords locally on your device. No data collection, no servers.">
+    <title>Our Apps</title>
+    <meta name="description" content="A collection of simple, privacy-friendly iOS apps.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -19,7 +19,7 @@
         .hero {
             background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
             color: white;
-            padding: 80px 20px 60px;
+            padding: 70px 20px 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -44,79 +44,20 @@
             margin: 0 auto;
         }
 
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #5b8def 0%, #3a6bd6 100%);
-            border-radius: 28px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .app-icon svg {
-            width: 60px;
-            height: 60px;
-            fill: white;
-        }
-
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 700;
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
 
         .hero .tagline {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            margin-bottom: 32px;
             font-weight: 400;
         }
 
-        .app-store-button {
-            display: inline-flex;
-            align-items: center;
-            background: #000;
-            color: white !important;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .app-store-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .app-store-button svg {
-            margin-right: 12px;
-            width: 32px;
-            height: 32px;
-        }
-
-        .app-store-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            line-height: 1.2;
-        }
-
-        .app-store-text .small {
-            font-size: 0.75rem;
-            opacity: 0.9;
-        }
-
-        .app-store-text .large {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .features {
+        .apps {
             max-width: 1000px;
             margin: 60px auto;
             padding: 0 20px;
@@ -130,53 +71,99 @@
             margin-bottom: 40px;
         }
 
-        .features-grid {
+        .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
         }
 
-        .feature-card {
+        .app-card {
             background: white;
-            padding: 32px 24px;
+            padding: 28px 24px;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .feature-card:hover {
+        .app-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
+        .app-icon {
+            width: 84px;
+            height: 84px;
             background: linear-gradient(135deg, #5b8def 0%, #3a6bd6 100%);
-            border-radius: 16px;
+            border-radius: 20px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 16px rgba(58, 107, 214, 0.35);
         }
 
-        .feature-icon svg {
-            width: 30px;
-            height: 30px;
+        .app-icon svg {
+            width: 44px;
+            height: 44px;
             fill: white;
         }
 
-        .feature-card h3 {
-            font-size: 1.2rem;
+        .app-card h3 {
+            font-size: 1.25rem;
             font-weight: 600;
             color: #1a202c;
             margin-bottom: 8px;
         }
 
-        .feature-card p {
+        .app-card p {
             color: #4a5568;
             font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .app-store-button {
+            display: inline-flex;
+            align-items: center;
+            background: #000;
+            color: white !important;
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .app-store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .app-store-button svg {
+            margin-right: 10px;
+            width: 28px;
+            height: 28px;
+        }
+
+        .app-store-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.2;
+        }
+
+        .app-store-text .small {
+            font-size: 0.72rem;
+            opacity: 0.9;
+        }
+
+        .app-store-text .large {
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         .links-section {
@@ -248,14 +235,6 @@
             .hero .tagline {
                 font-size: 1.05rem;
             }
-            .app-icon {
-                width: 90px;
-                height: 90px;
-            }
-            .app-icon svg {
-                width: 45px;
-                height: 45px;
-            }
             .section-title {
                 font-size: 1.5rem;
             }
@@ -273,67 +252,51 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <div class="app-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                </svg>
-            </div>
-            <h1>Generator Passwords</h1>
-            <p class="tagline">Generate strong, secure passwords — fast and private</p>
-            <a href="https://apps.apple.com/app/id6761270008" class="app-store-button" target="_blank">
-                <svg viewBox="0 0 384 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
-                </svg>
-                <span class="app-store-text">
-                    <span class="small">Download on the</span>
-                    <span class="large">App Store</span>
-                </span>
-            </a>
+            <h1>Our Apps</h1>
+            <p class="tagline">Simple, privacy-friendly apps — designed with you in mind</p>
         </div>
     </section>
 
-    <section class="features">
-        <h2 class="section-title">Why Generator Passwords?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
+    <section class="apps">
+        <h2 class="section-title">Our Apps</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
+                        <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
                     </svg>
                 </div>
-                <h3>100% Private</h3>
-                <p>All passwords are generated locally on your device. Nothing is sent to any server.</p>
+                <h3>Screen &amp; Camera Translate</h3>
+                <p>Instantly translate text on your screen or through your camera, across many languages.</p>
+                <a href="https://apps.apple.com/app/id6771776843" class="app-store-button" target="_blank">
+                    <svg viewBox="0 0 384 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                    </svg>
+                    <span class="app-store-text">
+                        <span class="small">Download on the</span>
+                        <span class="large">App Store</span>
+                    </span>
+                </a>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
+            <div class="app-card">
+                <div class="app-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                     </svg>
                 </div>
-                <h3>Fast & Simple</h3>
-                <p>Generate strong passwords in seconds with a clean, intuitive interface.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                <h3>Generator Passwords</h3>
+                <p>Generate strong, secure passwords locally on your device — fast, simple, and private.</p>
+                <a href="https://apps.apple.com/app/id6761270008" class="app-store-button" target="_blank">
+                    <svg viewBox="0 0 384 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
                     </svg>
-                </div>
-                <h3>Customizable</h3>
-                <p>Choose length, complexity, and character types to match your security needs.</p>
+                    <span class="app-store-text">
+                        <span class="small">Download on the</span>
+                        <span class="large">App Store</span>
+                    </span>
+                </a>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                </div>
-                <h3>No Data Collection</h3>
-                <p>We don't collect, store, or transmit any of your personal data. Ever.</p>
-            </div>
+            <!-- Add more app cards here as new apps are released -->
         </div>
     </section>
 
@@ -347,7 +310,7 @@
 
     <footer class="footer">
         <p>Contact: <a href="mailto:zhapplicationsupport@gmail.com">zhapplicationsupport@gmail.com</a></p>
-        <p style="margin-top: 8px;">&copy; 2026 Generator Passwords. All rights reserved.</p>
+        <p style="margin-top: 8px;">&copy; 2026. All rights reserved.</p>
     </footer>
 </body>
 </html>
