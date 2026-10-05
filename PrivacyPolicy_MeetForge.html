@@ -43,9 +43,7 @@
       header { margin-bottom: 32px; }
       h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
       .updated { color: var(--muted); font-size: 15px; margin: 0; }
-      h2 {
-        font-size: 22px; margin: 36px 0 10px; letter-spacing: -0.01em;
-      }
+      h2 { font-size: 22px; margin: 36px 0 10px; letter-spacing: -0.01em; }
       p { margin: 0 0 14px; }
       ul { margin: 0 0 14px; padding-left: 22px; }
       li { margin: 6px 0; }
@@ -60,21 +58,13 @@
         padding: 3px;
         margin-bottom: 28px;
       }
-      .lang-switch button {
-        appearance: none;
-        border: 0;
-        background: transparent;
-        color: var(--fg);
-        font: inherit;
+      .lang-switch a {
         font-size: 15px;
         padding: 6px 16px;
         border-radius: 980px;
-        cursor: pointer;
+        color: var(--fg);
       }
-      .lang-switch button[aria-pressed="true"] {
-        background: var(--accent);
-        color: #fff;
-      }
+      .lang-switch a:hover { text-decoration: none; }
       .note {
         background: var(--card);
         border: 1px solid var(--border);
@@ -90,18 +80,81 @@
         color: var(--muted);
         font-size: 15px;
       }
-      [hidden] { display: none !important; }
+
+      /* Pure-CSS language toggle via :target — no JavaScript needed.
+         Default shows English; #uk in the URL shows Ukrainian and hides English.
+         (The Ukrainian section is placed first so the ~ sibling selector can hide #en.) */
+      #en { display: block; }
+      #uk { display: none; }
+      #uk:target { display: block; }
+      #uk:target ~ #en { display: none; }
+
+      /* Highlight the active tab based on the current :target */
+      .lang-switch a[href="#en"] { background: var(--accent); color: #fff; }
+      .lang-switch a[href="#uk"] { background: transparent; color: var(--fg); }
+      #uk:target ~ .lang-switch a[href="#en"] { background: transparent; color: var(--fg); }
+      #uk:target ~ .lang-switch a[href="#uk"] { background: var(--accent); color: #fff; }
     </style>
   </head>
   <body>
     <main>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">English</button>
-        <button type="button" data-lang="uk" aria-pressed="false">Українська</button>
-      </div>
+      <!-- UKRAINIAN (placed first so CSS can toggle English off) -->
+      <section id="uk">
+        <nav class="lang-switch" aria-label="Language">
+          <a href="#en">English</a>
+          <a href="#uk">Українська</a>
+        </nav>
+        <header>
+          <h1>MeetForge — Політика приватності</h1>
+          <p class="updated">Останнє оновлення: 5 жовтня 2026</p>
+        </header>
 
-      <!-- ENGLISH -->
+        <p>MeetForge («застосунок») створено з пріоритетом приватності. Ця політика пояснює, що
+  застосунок робить і чого не робить з вашими даними.</p>
+
+        <h2>Які дані ми збираємо</h2>
+        <p>MeetForge не збирає, не передає й не поширює жодних персональних даних. Немає акаунтів,
+  аналітики, і застосунок не підключається до інтернету.</p>
+
+        <h2>Записи</h2>
+        <p>Записаний звук зберігається лише в обрану вами теку на вашому Mac. Записи не залишають
+  ваш пристрій, і ми не маємо до них доступу.</p>
+
+        <h2>Дозволи</h2>
+        <ul>
+          <li><strong>Мікрофон</strong> — використовується лише для запису вашого мікрофона, якщо
+  ви увімкнули цю опцію.</li>
+          <li><strong>Запис екрана</strong> — потрібен macOS (ScreenCaptureKit) для захоплення
+  звуку обраного застосунку. MeetForge записує лише звук; відео не записується й не
+  зберігається.</li>
+        </ul>
+
+        <h2>Поширення</h2>
+        <p>Ми не продаємо, не передаємо й не розповсюджуємо ваші дані чи записи нікому.</p>
+
+        <div class="note">
+          <p><strong>Ваша відповідальність.</strong> Запис дзвінків чи зустрічей може потребувати
+  згоди всіх учасників відповідно до законів вашої країни. Ви самостійно відповідаєте за отримання
+  потрібної згоди перед записом.</p>
+        </div>
+
+        <h2>Діти</h2>
+        <p>MeetForge не призначений для дітей і свідомо не збирає даних.</p>
+
+        <h2>Зміни</h2>
+        <p>Ми можемо оновлювати цю політику; дата вгорі відображає актуальну версію.</p>
+
+        <footer>
+          Питання? Напишіть на <a href="mailto:sergiyzhyrov@gmail.com">sergiyzhyrov@gmail.com</a>.
+        </footer>
+      </section>
+
+      <!-- ENGLISH (default) -->
       <section id="en">
+        <nav class="lang-switch" aria-label="Language">
+          <a href="#en">English</a>
+          <a href="#uk">Українська</a>
+        </nav>
         <header>
           <h1>MeetForge — Privacy Policy</h1>
           <p class="updated">Last updated: 5 October 2026</p>
@@ -147,73 +200,6 @@
           Questions? Contact <a href="mailto:sergiyzhyrov@gmail.com">sergiyzhyrov@gmail.com</a>.
         </footer>
       </section>
-
-      <!-- UKRAINIAN -->
-      <section id="uk" hidden>
-        <header>
-          <h1>MeetForge — Політика приватності</h1>
-          <p class="updated">Останнє оновлення: 5 жовтня 2026</p>
-        </header>
-
-        <p>MeetForge («застосунок») створено з пріоритетом приватності. Ця політика пояснює, що
-  застосунок робить і чого не робить з вашими даними.</p>
-
-        <h2>Які дані ми збираємо</h2>
-        <p>MeetForge не збирає, не передає й не поширює жодних персональних даних. Немає акаунтів,
-  аналітики, і застосунок не підключається до інтернету.</p>
-
-        <h2>Записи</h2>
-        <p>Записаний звук зберігається лише в обрану вами теку на вашому Mac. Записи не залишають
-  ваш пристрій, і ми не маємо до них доступу.</p>
-
-        <h2>Дозволи</h2>
-        <ul>
-          <li><strong>Мікрофон</strong> — використовується лише для запису вашого мікрофона, якщо
-  ви увімкнули цю опцію.</li>
-          <li><strong>Запис екрана</strong> — потрібен macOS (ScreenCaptureKit) для захоплення
-  звуку обраного застосунку. MeetForge записує лише звук; відео не записується й не
-  зберігається.</li>
-        </ul>
-
-        <h2>Поширення</h2>
-        <p>Ми не продаємо, не передаємо й не розповсюджуємо ваші дані чи записи нікому.</p>
-
-        <div class="note">
-          <p><strong>Ваша відповідальність.</strong> Запис дзвінків чи зустрічей може потребувати
-  згоди всіх учасників відповідно до законів вашої країни. Ви самостійно відповідаєте за отримання
-  потрібної згоди перед записом.</p>
-        </div>
-
-        <h2>Діти</h2>
-        <p>MeetForge не призначений для дітей і свідомо не збирає даних.</p>
-
-        <h2>Зміни</h2>
-        <p>Ми можемо оновлювати цю політику; дата вгорі відображає актуальну версію.</p>
-
-        <footer>
-          Питання? Напишіть на <a href="mailto:sergiyzhyrov@gmail.com">sergiyzhyrov@gmail.com</a>.
-        </footer>
-      </section>
     </main>
-
-    <script>
-      (function () {
-        var buttons = document.querySelectorAll(".lang-switch button");
-        var sections = { en: document.getElementById("en"), uk: document.getElementById("uk") };
-        function show(lang) {
-          if (!sections[lang]) lang = "en";
-          sections.en.hidden = lang !== "en";
-          sections.uk.hidden = lang !== "uk";
-          document.documentElement.lang = lang;
-          buttons.forEach(function (b) {
-            b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
-          });
-        }
-        buttons.forEach(function (b) {
-          b.addEventListener("click", function () { show(b.dataset.lang); });
-        });
-        show((navigator.language || "en").toLowerCase().indexOf("uk") === 0 ? "uk" : "en");
-      })();
-    </script>
   </body>
   </html>
