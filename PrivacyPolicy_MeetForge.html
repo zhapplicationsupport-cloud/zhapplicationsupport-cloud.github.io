@@ -1,1 +1,219 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MeetForge — Privacy Policy</title>
+    <meta name="description" content="Privacy policy for MeetForge, a macOS menu-bar app that
+  records meeting audio locally.">
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #1d1d1f;
+        --muted: #6e6e73;
+        --accent: #0071e3;
+        --card: #f5f5f7;
+        --border: #d2d2d7;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --fg: #f5f5f7;
+          --muted: #a1a1a6;
+          --accent: #2997ff;
+          --card: #1c1c1e;
+          --border: #38383a;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+  sans-serif;
+        padding: 0 20px;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+      header { margin-bottom: 32px; }
+      h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+      .updated { color: var(--muted); font-size: 15px; margin: 0; }
+      h2 {
+        font-size: 22px; margin: 36px 0 10px; letter-spacing: -0.01em;
+      }
+      p { margin: 0 0 14px; }
+      ul { margin: 0 0 14px; padding-left: 22px; }
+      li { margin: 6px 0; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .lang-switch {
+        display: inline-flex;
+        gap: 2px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 980px;
+        padding: 3px;
+        margin-bottom: 28px;
+      }
+      .lang-switch button {
+        appearance: none;
+        border: 0;
+        background: transparent;
+        color: var(--fg);
+        font: inherit;
+        font-size: 15px;
+        padding: 6px 16px;
+        border-radius: 980px;
+        cursor: pointer;
+      }
+      .lang-switch button[aria-pressed="true"] {
+        background: var(--accent);
+        color: #fff;
+      }
+      .note {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px 18px;
+        margin: 20px 0;
+      }
+      .note p { margin: 0; color: var(--fg); }
+      footer {
+        margin-top: 48px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 15px;
+      }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="uk" aria-pressed="false">Українська</button>
+      </div>
 
+      <!-- ENGLISH -->
+      <section id="en">
+        <header>
+          <h1>MeetForge — Privacy Policy</h1>
+          <p class="updated">Last updated: 5 October 2026</p>
+        </header>
+
+        <p>MeetForge (“the app”) is built with privacy at its core. This policy explains what the
+  app does and does not do with your data.</p>
+
+        <h2>Data we collect</h2>
+        <p>MeetForge does not collect, transmit, or share any personal data. There are no user
+  accounts, no analytics, and the app does not connect to the internet.</p>
+
+        <h2>Recordings</h2>
+        <p>Audio you record is saved only to the location you choose on your Mac. Recordings never
+  leave your device, and we have no access to them.</p>
+
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>Microphone</strong> — used only to record your microphone when you enable
+  that option.</li>
+          <li><strong>Screen Recording</strong> — required by macOS (ScreenCaptureKit) to capture
+  the audio of the meeting app you select. MeetForge records audio only; it does not record or
+  store video.</li>
+        </ul>
+
+        <h2>Sharing</h2>
+        <p>We do not sell, share, or transmit your data or recordings to anyone.</p>
+
+        <div class="note">
+          <p><strong>Your responsibility.</strong> Recording calls or meetings may require the
+  consent of all participants under the laws of your country, state, or region. You are solely
+  responsible for obtaining any required consent before recording.</p>
+        </div>
+
+        <h2>Children</h2>
+        <p>MeetForge is not directed at children and does not knowingly collect data from
+  anyone.</p>
+
+        <h2>Changes</h2>
+        <p>We may update this policy; the date above reflects the latest version.</p>
+
+        <footer>
+          Questions? Contact <a href="mailto:sergiyzhyrov@gmail.com">sergiyzhyrov@gmail.com</a>.
+        </footer>
+      </section>
+
+      <!-- UKRAINIAN -->
+      <section id="uk" hidden>
+        <header>
+          <h1>MeetForge — Політика приватності</h1>
+          <p class="updated">Останнє оновлення: 5 жовтня 2026</p>
+        </header>
+
+        <p>MeetForge («застосунок») створено з пріоритетом приватності. Ця політика пояснює, що
+  застосунок робить і чого не робить з вашими даними.</p>
+
+        <h2>Які дані ми збираємо</h2>
+        <p>MeetForge не збирає, не передає й не поширює жодних персональних даних. Немає акаунтів,
+  аналітики, і застосунок не підключається до інтернету.</p>
+
+        <h2>Записи</h2>
+        <p>Записаний звук зберігається лише в обрану вами теку на вашому Mac. Записи не залишають
+  ваш пристрій, і ми не маємо до них доступу.</p>
+
+        <h2>Дозволи</h2>
+        <ul>
+          <li><strong>Мікрофон</strong> — використовується лише для запису вашого мікрофона, якщо
+  ви увімкнули цю опцію.</li>
+          <li><strong>Запис екрана</strong> — потрібен macOS (ScreenCaptureKit) для захоплення
+  звуку обраного застосунку. MeetForge записує лише звук; відео не записується й не
+  зберігається.</li>
+        </ul>
+
+        <h2>Поширення</h2>
+        <p>Ми не продаємо, не передаємо й не розповсюджуємо ваші дані чи записи нікому.</p>
+
+        <div class="note">
+          <p><strong>Ваша відповідальність.</strong> Запис дзвінків чи зустрічей може потребувати
+  згоди всіх учасників відповідно до законів вашої країни. Ви самостійно відповідаєте за отримання
+  потрібної згоди перед записом.</p>
+        </div>
+
+        <h2>Діти</h2>
+        <p>MeetForge не призначений для дітей і свідомо не збирає даних.</p>
+
+        <h2>Зміни</h2>
+        <p>Ми можемо оновлювати цю політику; дата вгорі відображає актуальну версію.</p>
+
+        <footer>
+          Питання? Напишіть на <a href="mailto:sergiyzhyrov@gmail.com">sergiyzhyrov@gmail.com</a>.
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll(".lang-switch button");
+        var sections = { en: document.getElementById("en"), uk: document.getElementById("uk") };
+        function show(lang) {
+          if (!sections[lang]) lang = "en";
+          sections.en.hidden = lang !== "en";
+          sections.uk.hidden = lang !== "uk";
+          document.documentElement.lang = lang;
+          buttons.forEach(function (b) {
+            b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+          });
+        }
+        buttons.forEach(function (b) {
+          b.addEventListener("click", function () { show(b.dataset.lang); });
+        });
+        show((navigator.language || "en").toLowerCase().indexOf("uk") === 0 ? "uk" : "en");
+      })();
+    </script>
+  </body>
+  </html>
